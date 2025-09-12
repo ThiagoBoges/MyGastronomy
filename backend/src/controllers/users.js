@@ -1,6 +1,6 @@
 // Em src/controllers/users.js
 
-import UsersDataAcess from "../dataAcess/users.js";
+import UsersDataAcess from "../dataAccess/users.js";
 import { ok, serverError } from '../helpers/httpResponse.js';
 
 export default class UsersControllers {

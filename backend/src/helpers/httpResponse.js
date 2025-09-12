@@ -1,23 +1,31 @@
 export const ok = (body) => {
     return {
         success: true,
-        statuscode: 200, 
+        statusCode: 200,
         body: body
-    }
-}
+    };
+};
+
+export const created = (body) => {
+    return {
+        success: true,
+        statusCode: 201,
+        body: body
+    };
+};
 
 export const notFound = () => {
     return {
         success: false,
-        statuscode: 404, 
-        body: 'Not Found'
-    }
-}
+        statusCode: 404, 
+        body: { message: 'Recurso não encontrado.' }
+    };
+};
 
-export const serverError = (error) => { 
+export const serverError = (error) => {
     return {
         success: false,
-        statuscode: 500, 
-        body: error.message 
-    }
-}
+        statusCode: 500, 
+        body: { message: error.message }
+    };
+};
